@@ -4938,8 +4938,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .padd-box .padd-box-sm {
-        margin-left: 8.6%;
-        margin-right: 8.6%;
+        margin-left: 3.6%;
+        margin-right: 3.6%;
     }
 }
 
@@ -6105,7 +6105,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 .ref-box {
     position: relative;
-    padding-left: 70px;
+    padding-left: 0px;
     padding-bottom: 1.875em;
     margin-bottom: 2.5em;
     min-height: 58px;
