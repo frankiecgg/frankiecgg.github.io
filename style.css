@@ -2449,6 +2449,13 @@ img.aligncenter {
     margin-bottom: 0.7em;
 }
 
+.progress-title1 {
+    font-size: 1.05em;
+    line-height: 1.2em;
+    display: block;
+    margin-bottom: 0.7em;
+}
+
 /* Progress Bar: Chart */
 .progress-chart {
     text-align: center;

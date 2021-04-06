@@ -22,6 +22,10 @@
     <link href="js/plugins/highlight/solarized-light.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 
+	<!-- Gitalk -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
     <!-- Modernizer -->
     <script type="text/javascript" src="js/vendor/modernizr-3.3.1.min.js"></script>
   </head>
@@ -70,7 +74,7 @@
 			</div>
 
 			<footer class="ace-card-footer">
-				<a class="btn btn-lg btn-block btn-thin btn-upper " href="/files/SiyuanChenResume.pdf">Download Resume</a>
+				<a class="btn btn-lg btn-block btn-thin btn-upper " href="/files/SiyuanChenResume.pdf" target="_blank">Download Resume</a>
 			</footer>
 		</article><!-- #ace-card -->
 
@@ -87,11 +91,11 @@
 										<li>
 											<a href="experience.html" data-tooltip="Experience"><span class="ace-icon ace-icon-experience"></span></a>
 										</li>
+										<li>
+											<a href="blog.html" data-tooltip="Blog"><span class="ace-icon ace-icon-blog"></span></a>
+										</li>
 										<li class="active">
 											<a href="contact.html" data-tooltip="Contact"><span class="ace-icon ace-icon-contact"></span></a>
-										</li>
-										<li>
-											<a href="category.html" data-tooltip="Blog"><span class="ace-icon ace-icon-blog"></span></a>
 										</li>
 									</ul>
                                 </nav>
@@ -129,44 +133,20 @@
         </header>
     </div>
 
-    <div class="padd-box-sm">
-        <form action="#" method="post" class="contact-form">
+	<div id="gitalk-container"></div>
+	<script>
+		const gitalk = new Gitalk({
+			clientID: '2f59f33d9debee33be27',
+			clientSecret: '27f870ade171a751680b8bd0bc22f2c9694e95f6',
+			repo: 'frankie.github.io',      // The repository of store comments,
+			owner: 'frankiecgg',
+			admin: ['frankiecgg'],
+			id: location.pathname,      // Ensure uniqueness and length less than 50
+			distractionFreeMode: false  // Facebook-like distraction free mode
+			});
+		gitalk.render('gitalk-container')
+	</script>
 
-            <div class="form-group">
-                <label class="form-label" for="author">Your Name</label>
-                <div class="form-item-wrap">
-                    <input id="author" class="form-item" type="text">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="email">Your E-mail</label>
-                <div class="form-item-wrap">
-                    <input id="email" class="form-item" type="email" required="required">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="url">Subject</label>
-                <div class="form-item-wrap">
-                    <input id="url" class="form-item" type="url">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="comment">Your Comment</label>
-                <div class="form-item-wrap">
-                    <textarea id="comment" class="form-item"></textarea>
-                </div>
-            </div>
-
-            <div class="form-submit form-item-wrap">
-                <input class="btn btn-primary btn-lg" type="submit" value="Post Your Comment">
-            </div>
-        </form>
-    </div>
-
-    <div id="map" data-latitude="50.84592" data-longitude="4.366859999999974"></div>
 
 <!-- END: PAGE CONTENT -->
 						
